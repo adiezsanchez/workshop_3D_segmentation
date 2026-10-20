@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Díez-Sánchez"
+  given-names: "Alberto"
+  orcid: "https://orcid.org/0000-0001-5146-3089"
+title: "adiezsanchez/YAP_nuclear_3D_orgs: YAP-LOC3D"
+version: 1.0.0
+doi: "https://doi.org/10.5281/zenodo.20081226"
+date-released: 2026-05-05
+url: "https://github.com/adiezsanchez/YAP_nuclear_3D_orgs"
