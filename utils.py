@@ -226,7 +226,8 @@ def map_df_column_to_labels(
     normalize: bool = False,
     clip_percentiles: Optional[Tuple[float, float]] = (1, 99),
     background_value: float = 0.0,
-    colormap: str = "turbo",   
+    colormap: str = "turbo",
+    contrast_limits: Optional[Tuple[float, float]] = None,
     visualize: bool = False,
     viewer=None,
     layer_name: Optional[str] = None,
@@ -266,7 +267,12 @@ def map_df_column_to_labels(
 
         colormap (str, optional):
             Colormap to use for visualization. Default is "turbo".
-            
+
+        contrast_limits (tuple or None, optional):
+            Optional (min, max) display limits passed to Napari when visualizing.
+            Does not rescale mapped array values; independent of `normalize` and
+            `clip_percentiles`.
+
         visualize (bool, optional):
             If True, display the result in Napari.
 
@@ -325,9 +331,11 @@ def map_df_column_to_labels(
     if visualize:
         v = _resolve_napari_viewer(viewer)
         name = layer_name if layer_name is not None else value_column
-        v.add_image(
-            out,
-            name=name,
-            colormap=colormap,
-            blending="additive",
-        )
+        image_kwargs = {
+            "name": name,
+            "colormap": colormap,
+            "blending": "additive",
+        }
+        if contrast_limits is not None:
+            image_kwargs["contrast_limits"] = contrast_limits
+        v.add_image(out, **image_kwargs)
