@@ -69,11 +69,16 @@ After installing pixi, type the following command and enjoy the fastest venv man
 
 <h2>Raw Data Download (.czi)</h2>
 
-1. [Contact Me](mailto:alberto.d.sanchez@ntnu.no) to obtain a fresh working S3 bucket pre-signed link.
+**Repository owner** (requires AWS profile <code>mhread</code>): refresh the committed presigned URL and push it:
 
-2. Paste the link inside <code>0_data_download.ipynb</code> notebook after <code>presigned_url</code>.
+<code>pixi run generate_link</code>
 
-3. Run the notebook to download and extract the data.
+**Workshop users**: pull the latest URL file, then download and extract:
+
+1. <code>git pull</code>
+2. <code>pixi run data_download</code>
+
+The download task verifies that local <code>data_url.json</code> matches the remote branch before downloading. The notebooks <code>00_presigned_url_generator.ipynb</code> and <code>0_data_download.ipynb</code> remain available as manual alternatives.
 
 <h2>Bioimage Archive deposition</h2>
 

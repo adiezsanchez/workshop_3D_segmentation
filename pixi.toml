@@ -19,6 +19,14 @@ cmd = "napari"
 [tasks.install-kernel]
 cmd = "python -m ipykernel install --user --name workshop_3D_segmentation --display-name \"Python (pixi: workshop_3D_segmentation)\""
 
+# Owner-only: refresh S3 presigned URL, commit, and push data_url.json
+[tasks.generate_link]
+cmd = "python scripts/generate_link.py"
+
+# Workshop users: sync-check committed URL, then download and extract raw data
+[tasks.data_download]
+cmd = "python scripts/data_download.py"
+
 # -------------------------
 # Conda-forge dependencies
 # -------------------------
@@ -38,5 +46,7 @@ czifile = "*" # Zeiss CZI file reader
 plotly = "*" # plotting library
 pyclesperanto-prototype = "*" # GPU image processing (OpenCL)
 pyqt = "*" # GUI backend for napari
+requests = "*" # HTTP downloads for data_download
 setuptools = "<81" # pin to avoid pkg_resources removal
 seaborn = ">=0.13.2,<0.14"
+tqdm = "*" # download progress bars
