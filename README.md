@@ -40,7 +40,7 @@ In order to facilitate cross-paltform compatibility and skip waiting for computi
 
 After installing pixi, type the following command and enjoy the fastest venv manager in the market. After it is done installing your virtual environment it will launch a Jupyter Server in your browser so you can interact with the pipelines.
 
-<code>cd YAP_nuclear_3D_orgs && pixi run lab</code>
+<code>cd workshop_3D_segmentation && pixi run lab</code>
 
 <h2>Workflow summary</h2>
 
