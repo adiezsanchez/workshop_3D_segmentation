@@ -32,7 +32,7 @@ cmd = "python scripts/data_download.py"
 cmd = "pixi install && pixi run data_download && pixi run lab"
 
 # -------------------------
-# Conda-forge dependencies
+# Cross-platform dependencies
 # -------------------------
 
 [dependencies]
@@ -54,3 +54,13 @@ requests = "*" # HTTP downloads for data_download
 setuptools = "<81" # pin to avoid pkg_resources removal
 seaborn = ">=0.13.2,<0.14"
 tqdm = "*" # download progress bars
+
+# -------------------------
+# Platform-specific deps
+# -------------------------
+
+[target.linux-64.dependencies]
+ocl-icd-system = "*"                                   # ICD to discover vendor OpenCL implementations
+
+[target.osx-arm64.dependencies]
+ocl_icd_wrapper_apple = "*"                            # ICD to discover vendor OpenCL implementations

@@ -73,6 +73,16 @@ After it is done installing your virtual environment and downloading the data it
 
 The download task verifies that local <code>data_url.json</code> matches the remote branch before downloading. The notebooks <code>00_presigned_url_generator.ipynb</code> and <code>0_data_download.ipynb</code> remain available as manual alternatives.
 
+<h2>Troubleshooting</h2>
+
+<code>PLATFORM_NOT_FOUND_KHR</code> means the OpenCL loader started, then found no driver.
+
+For Windows install a CPU OpenCL driver into that same vendor directory with oclgrind:
+<code>pixi add oclgrind</code>
+
+For Linux and MacOS install a CPU OpenCL driver into that same vendor directory with pocl:
+<code>pixi add pocl</code>
+
 <h2>Bioimage Archive deposition</h2>
 
 Placeholder for Bioimage Archive repository
