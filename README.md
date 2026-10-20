@@ -10,16 +10,7 @@ In order to facilitate cross-paltform compatibility and skip waiting for computi
 
 ![filtered_organoid_labels](./assets/organoids.png)
 
-<h2>How to install this tool? (Environment setup)</h2>
-
-> [!TIP]
-> In order to run these Jupyter notebooks and .py scripts you will need to familiarize yourself with the use of Python virtual environments, IDEs and Git. If you are not familiar with those concepts worry not. Watch the [Before you start (Python, IDE and Git on Windows)](https://youtu.be/tzdFuxF2E3U) video, it will guide you through the necessary steps and cover all basic concepts.
-> 
-> TL;DR You are busy in the wet lab, skip to the Pixi section below.
-
-|  | Watch on YouTube | Description |
-|-------|------------------|-------------|
-| <img src="./assets/part0_thumbnail.png" width="300"> | [Before you start (Python, IDE and Git on Windows)](https://youtu.be/tzdFuxF2E3U) | If you are not familiar with Python, Virtual Environments, Integrated Developer Environments (IDEs) or version control this is the place to start. In this video we will cover how to configure your Windows machine to be able to run this pipeline  |
+<h2>How to follow this workshop? (Environment setup)</h2>
 
 1. Clone this repository using:
 
@@ -38,9 +29,11 @@ In order to facilitate cross-paltform compatibility and skip waiting for computi
 > [!TIP]
 > If you want to use the latest in environment managers I do recommend switching to [Pixi](https://pixi.sh/latest/installation/), it will pay off in the short term. 
 
-After installing pixi, type the following command and enjoy the fastest venv manager in the market. After it is done installing your virtual environment it will launch a Jupyter Server in your browser so you can interact with the pipelines.
+After installing pixi, type the following command: 
 
-<code>cd workshop_3D_segmentation && pixi run lab</code>
+<code>cd workshop_3D_segmentation && pixi run workshop</code>
+
+After it is done installing your virtual environment and downloading the data it will launch a Jupyter Server in your browser so you can interact with the pipelines.
 
 <h2>Workflow summary</h2>
 

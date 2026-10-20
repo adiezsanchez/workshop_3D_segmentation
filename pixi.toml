@@ -27,6 +27,10 @@ cmd = "python scripts/generate_link.py"
 [tasks.data_download]
 cmd = "python scripts/data_download.py"
 
+# Install env, then run data_download twice
+[tasks.workshop]
+cmd = "pixi install && pixi run data_download && pixi run lab"
+
 # -------------------------
 # Conda-forge dependencies
 # -------------------------
