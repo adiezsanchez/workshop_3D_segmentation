@@ -1,4 +1,4 @@
-<h1>(YAP-LOC3D) - Quantifying Nuclear Translocation of YAP in 3D Organoids Using CellposeSAM and Pyclesperanto-Based Morphological Operations</h1>
+<h1>3D Segmentation Workshop - Quantifying Nuclear Translocation of YAP in 3D Organoids Using Cellpose and Pyclesperanto-Based Morphological Operations</h1>
 
 [![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.20081225-blue.svg)](https://doi.org/10.5281/zenodo.20081225)
 [![License](https://img.shields.io/pypi/l/napari-accelerated-pixel-and-object-classification.svg?color=green)](https://github.com/adiezsanchez/brain_tissue_nuc_segm/blob/main/LICENSE)
