@@ -60,7 +60,11 @@ tqdm = "*" # download progress bars
 # -------------------------
 
 [target.linux-64.dependencies]
-ocl-icd-system = "*"                                   # ICD to discover vendor OpenCL implementations
+ocl-icd-system = "*"   # NVIDIA/Intel GPU when the driver is installed
+pocl = "*"             # CPU OpenCL when it is not
 
 [target.osx-arm64.dependencies]
-ocl_icd_wrapper_apple = "*"                            # ICD to discover vendor OpenCL implementations
+pocl = "*"             # replaces ocl_icd_wrapper_apple
+
+[target.osx-64.dependencies]
+pocl = "*"             # Intel Macs are in platforms and currently have no OpenCL dep
